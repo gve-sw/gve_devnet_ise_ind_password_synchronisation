@@ -1,0 +1,73 @@
+<!-- Template page: This settings page offers various input field to gather settings information -->
+
+    {% extends "masterPage.html" %}
+
+    {% block content %}
+    <div class="row">
+            
+            <!-- Left Rail -->
+            <!-- Menu element-->
+            <div class="col-2">
+            </div>
+    
+            <!-- Middle Rail -->
+            <div class="col-8">
+                <div class="section" >
+                    <div class="panel panel--loose panel--raised base-margin-bottom" style="margin-top: 50px;">
+                        <h2 class="subtitle">ISE/IND Network Devices</h2>
+                        <hr>
+                        <form action="/" method="POST"> 
+                            <div class="section"> 
+                                                                                                 
+                                <!--CUSTOMIZE: Text field section: Add or remove elements as needed.-->
+                                                               
+                                <div class="responsive-table">
+                                    <table class="table table--lined table--selectable table">
+                                        <thead>
+                                            <tr>
+                                                <th>Device Name</th>
+                                                <th>IP Address</th>
+                                                <th>Password in IND</th>
+                                                <th>Password in ISE</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <script>
+                                            function loadButton(e) {
+                                                e.innerHTML = "Loading..."
+                                            }
+                                        </script>
+                                        <tbody>
+                                            {% for d in devices %}
+                                            <tr>
+                                                <td>{{d.indname}}</td>
+                                                <td>{{d.ip}}</td>
+                                                <td>{{d.indpw}}</td>
+                                                <td>{{d.isepw}}</td>
+                                                <td><button name="device" value="{{d.ap}}-{{d.isepw}}" onclick="loadButton(this)" class="btn btn-primary" type="submit"{% if d.isepw == d.indpw %} disabled {% endif %}>Sync</button></td>
+                                            </tr>
+                                            {% endfor %}
+                                        </tbody>
+                                    </table>
+                                     <!--CUSTOMIZE END-->
+                                </div>
+                                
+                                <!--CUSTOMIZE END-->
+
+                            </div> 
+
+                        </form>
+                        
+                        <!--Alert for error message-->
+                            <!--PASS INFO: Pass the following information to the template: error=True/False ; errormessage="xxx" ; errorcode=xxx-->
+                            
+    
+                    </div>
+                </div>
+            </div>
+    
+        <!-- Right Rail -->
+        <div class="col-0 col-xl-3 col-md-3">
+        </div>
+    </div>
+    {%  endblock %}

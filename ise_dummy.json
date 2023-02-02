@@ -1,0 +1,51 @@
+[
+    {
+      "name": "ASAv-vpn",
+      "id": "ASAv-vpn",
+      "description": "ASAv for RA-VPN",
+      "password": "",
+      "ip": "198.18.133.100"
+    },
+    {
+      "name": "CSR-Portals",
+      "id": "CSR-Portals",
+      "description": "CSR for portals",
+      "password": "C1sco12345",
+      "ip": "10.195.119.92"
+    },
+    {
+      "name": "CSR-Test",
+      "id": "CSR-Test",
+      "description": "CSR for T+ device admin",
+      "password": "C1sco123!",
+      "ip": "192.168.119.25"
+    },
+    {
+      "name": "DefaultNetworkDevice",
+      "id": "DefaultNetworkDevice",
+      "description": "Default Network Device",
+      "password": "No password in ISE",
+      "ip": "999.999.999.999"
+    },
+    {
+      "name": "Linux-Simulator",
+      "id": "Linux-Simulator",
+      "description": "Traffic Simulator",
+      "password": "Sgbu123!",
+      "ip": "10.195.119.167"
+    },
+    {
+      "name": "RADIUSSimWKST1",
+      "id": "RADIUSSimWKST1",
+      "description": "Workstation 1 RADIUS Sim",
+      "password": "No password in ISE",
+      "ip": "198.18.133.36"
+    },
+    {
+      "name": "WLC1",
+      "id": "WLC1",
+      "description": "WLC1",
+      "password": "No password in ISE",
+      "ip": "198.19.11.10"
+    }
+  ]
